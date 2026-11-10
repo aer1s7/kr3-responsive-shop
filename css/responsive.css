@@ -206,6 +206,10 @@ body {
   .order-form__group--wide {
     grid-column: 1 / -1;
   }
+
+  .order-form__field--wide {
+    grid-column: 1 / -1;
+  }
 }
 
 /* Product detail */
@@ -255,5 +259,13 @@ body {
   .contacts-grid,
   .contacts-map__facts {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Footer */
+
+@media (min-width: 768px) {
+  .site-footer__inner {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
