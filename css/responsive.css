@@ -1,0 +1,259 @@
+:root {
+  /* Основные цвета проекта */
+  --color-bg: #ffffff;
+  --color-text: #1f1235;
+  --color-muted: #6b5b8a;
+  --color-primary: #5b21b6;
+  --color-primary-dark: #3b0f80;
+  --color-border: #e4daf7;
+  --color-surface: #f7f7f7;
+  --color-surface-accent: #e0cfff;
+  --color-danger: #b00020;
+  --color-success: #3f5c10;
+  --color-success-bg: #eefaf0;
+  --color-white: #ffffff;
+  --color-shadow: rgba(109, 40, 217, 0.2);
+  /* Отступы */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  /* Скругления */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  /* Размеры */
+  --container-width: 1320px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Навигация */
+
+@media (min-width: 768px) {
+  .site-header {
+    position: sticky;
+  }
+}
+
+@media (min-width: 1024px) {
+  .site-header__inner {
+    flex-direction: row;
+  }
+}
+
+.site-nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm, 8px);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.site-nav__link {
+  display: block;
+  padding: 12px 16px;
+}
+
+@media (min-width: 768px) {
+  .site-nav__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+
+/* Hero */
+
+.hero__content {
+  display: grid;
+  gap: var(--space-md, 16px);
+}
+
+.hero__title {
+  font-size: clamp(28px, 7vw, 48px);
+  line-height: 1.1;
+}
+
+.hero__image {
+  width: 100%;
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: var(--space-xl) var(--space-lg);
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 540px);
+    padding: var(--space-2xl) var(--space-xl);
+  }
+}
+
+@media (min-width: 1240px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 720px);
+    padding: var(--space-2xl) var(--space-xl);
+  }
+  .hero__content {
+    gap: var(--space-xl, 24px);
+  }
+}
+
+/* Преимущества */
+
+@media (min-width: 768px) {
+  .advantages-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .advantages-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Сетка товаров */
+
+@media (min-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .products-grid--popular {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .products-grid--popular {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1440px) {
+  .products-grid--popular {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* About-shop facts */
+@media (min-width: 768px) {
+  .about-shop__facts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Фильтры */
+
+.catalog-layout {
+  display: grid;
+  gap: var(--space-lg, 24px);
+}
+
+.catalog-filters {
+  order: -1;
+}
+
+@media (min-width: 1024px) {
+  .catalog-layout {
+    grid-template-columns: 260px 1fr;
+    align-items: start;
+  }
+
+  .catalog-filters {
+    position: sticky;
+    top: 88px;
+    order: initial;
+  }
+}
+
+/* Order-form */
+
+@media (min-width: 768px) {
+  .order-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .order-form__group--wide {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Product detail */
+
+@media (min-width: 768px) {
+  .product-detail {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.product-table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+}
+
+.product-table th,
+.product-table td {
+  padding: 12px;
+  border: 1px solid var(--color-border, #ddd);
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .scroll-top {
+    right: 32px;
+    bottom: 32px;
+  }
+}
+
+/* Контакты */
+
+@media (min-width: 768px) {
+  .contacts-grid,
+  .contacts-map__facts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .contacts-grid,
+  .contacts-map__facts {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

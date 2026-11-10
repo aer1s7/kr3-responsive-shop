@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Каталог товаров учебного интернет-
+магазина."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Учебный интернет-магазин" />
+    <meta
+      property="og:description"
+      content="Учебный frontend-проект интернет-
+магазина."
+    />
+    <meta
+      property="og:image"
+      content="https://aer1s7.github.io/kr1-html-css-
+shop/images/preview.jpg"
+    />
+    <title>Каталог товаров — Учебный интернет-магазин</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-header__logo" href="index.html">Electron</a>
+        <nav class="site-nav" aria-label="Основная навигация">
+          <ul class="site-nav__list">
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="index.html"> Главная </a>
+            </li>
+            <li class="site-nav__item">
+              <a
+                class="site-nav__link site-nav__link--active"
+                href="catalog.html"
+                >Каталог</a
+              >
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="contacts.html">Контакты</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="index.html#popular">
+                Популярные товары
+              </a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="order.html"> Оформить заявку </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a class="breadcrumbs__link" href="index.html">Главная</a>
+        <span class="breadcrumbs__current">Каталог</span>
+      </nav>
+      <section class="catalog-layout">
+        <aside class="catalog-filters">
+          <h2>Фильтры</h2>
+          <form class="filters-form" action="#" method="get">
+            <fieldset>
+              <legend>Категория</legend>
+              <label>
+                <input type="checkbox" name="category" value="all" />
+                Все товары
+              </label>
+              <label>
+                <input type="checkbox" name="category" value="popular" />
+                Популярные
+              </label>
+              <label>
+                <input type="checkbox" name="category" value="new" />
+                Новинки
+              </label>
+            </fieldset>
+            <fieldset>
+              <legend>Цена</legend>
+              <label for="price-from">От</label>
+              <input
+                id="price-from"
+                name="price-from"
+                type="number"
+                min="0"
+                placeholder="0"
+              />
+              <label for="price-to">До</label>
+              <input
+                id="price-to"
+                name="price-to"
+                type="number"
+                min="0"
+                placeholder="5000"
+              />
+            </fieldset>
+            <button class="button button--primary" type="submit">
+              Применить
+            </button>
+          </form>
+        </aside>
+        <section class="catalog-products">
+          <h2>Список товаров</h2>
+          <div class="products-grid">
+            <article class="product-card product-card--featured">
+              <span class="product-card__badge">Новинка</span>
+              <a href="product.html"
+                ><img
+                  src="images/product-1.jpg"
+                  srcset="
+                    images/product-1.jpg 480w,
+                    images/product-1.jpg 640w,
+                    images/product-1.jpg 960w
+                  "
+                  sizes="(max-width: 639px) 100vw,
+         (max-width: 1023px) 50vw,
+         33vw"
+                  alt="Товар 1"
+                  width="640"
+                  height="480"
+                  class="product-card__image"
+                />
+              </a>
+              <h3 class="product-card__title">
+                <a href="product.html" class="product-card__link">
+                  Наушники накладные чёрные
+                </a>
+              </h3>
+              <p class="product-card__description">
+                Bluetooth 5.3, до 100 часов работы, быстрая зарядка USB Type-C.
+              </p>
+              <p class="product-card__price">4 000 ₽</p>
+              <a href="product.html">
+                <button
+                  class="button product-card__button"
+                  type="button"
+                  data-product="Товар 1"
+                >
+                  Подробнее
+                </button>
+              </a>
+            </article>
+            <article class="product-card">
+              <a href="product.html"
+                ><img class="product-card__image" src="images/product-2.jpg"
+              /></a>
+              <h3 class="product-card__title">
+                <a href="product.html" class="product-card__link"
+                  >Механическая клавиатура</a
+                >
+              </h3>
+              <p class="product-card__description">
+                Компактный формат, подсветка, программируемые клавиши.
+              </p>
+              <p class="product-card__price">6 000 ₽</p>
+              <a href="product.html">
+                <button
+                  class="button product-card__button"
+                  type="button"
+                  data-product="Товар 2"
+                >
+                  Подробнее
+                </button>
+              </a>
+            </article>
+            <article class="product-card">
+              <a href="product.html"
+                ><img class="product-card__image" src="images/product-3.jpg"
+              /></a>
+              <h3 class="product-card__title">
+                <a href="product.html" class="product-card__link">Ноутбук</a>
+              </h3>
+              <p class="product-card__description">
+                Яркий экран, длительная автономность, быстрый SSD.
+              </p>
+              <p class="product-card__price">60 000 ₽</p>
+              <a href="product.html">
+                <button
+                  class="button product-card__button"
+                  type="button"
+                  data-product="Товар 3"
+                >
+                  Подробнее
+                </button>
+              </a>
+            </article>
+            <article class="product-card">
+              <a href="product.html"
+                ><img class="product-card__image" src="images/product-4.webp"
+              /></a>
+              <h3 class="product-card__title">
+                <a href="product.html" class="product-card__link">
+                  43' Телевизор
+                </a>
+              </h3>
+              <p class="product-card__description">
+                43-дюймовый телевизор с разрешением 4K Ultra HD.
+              </p>
+              <p class="product-card__price">24 990 ₽</p>
+              <a href="product.html">
+                <button
+                  class="button product-card__button"
+                  type="button"
+                  data-product="Товар 4"
+                >
+                  Подробнее
+                </button>
+              </a>
+            </article>
+            <article class="product-card">
+              <a href="product.html"
+                ><img
+                  class="img product-card__image"
+                  src="images/product-5.webp"
+              /></a>
+              <h3 class="product-card__title">
+                <a href="product.html" class="product-card__link">
+                  Робот-пылесос
+                </a>
+              </h3>
+              <p class="product-card__description">
+                Робот-пылесос предназначен для ежедневной уборки.
+              </p>
+              <p class="product-card__price">20 990 ₽</p>
+              <a href="product.html">
+                <button
+                  class="button product-card__button"
+                  type="button"
+                  data-product="Товар 5"
+                >
+                  Подробнее
+                </button>
+              </a>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+    <footer id="site-footer">
+      <div class="site-footer__inner">
+        <div>
+          <h2 class="site-footer__logo">Electron</h2>
+          <p>Учебный интернет-магазин электроники</p>
+        </div>
+        <div class="site-footer__sections">
+          <h2>Разделы</h2>
+          <a class="site-footer__link" href="index.html">Главная</a>
+          <a class="site-footer__link" href="catalog.html">Каталог</a>
+          <a class="site-footer__link" href="order.html">Оформление заявки</a>
+          <a class="site-footer__link" href="contacts.html">Контакты</a>
+        </div>
+        <div>
+          <h2>Связаться с нами</h2>
+          <p>+7 925 726-02-95</p>
+          <p>support@email.com</p>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p>&copy; 2026 — Учебный проект</p>
+      </div>
+    </footer>
+    <a href="#top" class="scroll-top" aria-label="Наверх" title="Наверх"
+      ><img class="scroll-top__img" src="images/top.png"
+    /></a>
+  </body>
+</html>

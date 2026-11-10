@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Страница товара учебного интернет-магазина."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Учебный интернет-магазин" />
+    <meta
+      property="og:description"
+      content="Учебный frontend-проект интернет-магазина."
+    />
+    <meta
+      property="og:image"
+      content="https://aer1s7.github.io/kr1-html-css-shop/images/preview.jpg"
+    />
+    <title>Товар 1 — Учебный интернет-магазин</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-header__logo" href="index.html">Electron</a>
+        <nav class="site-nav" aria-label="Основная навигация">
+          <ul class="site-nav__list">
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="catalog.html">Каталог</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="contacts.html">Контакты</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="index.html#popular">
+                Популярные товары
+              </a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="order.html"> Оформить заявку </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a class="breadcrumbs__link" href="index.html">Главная</a>
+        <a class="breadcrumbs__current" href="catalog.html">Каталог</a>
+        <span class="breadcrumbs__current">Товар 1</span>
+      </nav>
+
+      <section class="section product-detail">
+        <div class="product-detail__media">
+          <img
+            class="product-detail__image"
+            src="images/product-1.jpg"
+            alt="Накладные наушники"
+          />
+        </div>
+
+        <div class="product-detail__info">
+          <h1 class="product-detail__title">Наушники накладные черные</h1>
+
+          <p class="product-detail__price">4000 ₽</p>
+
+          <p class="product-detail__stock">В наличии</p>
+
+          <p class="product-detail__description">
+            Накладные наушники в черном цвете имеют формат стереосистемы 2.0. Он
+            предполагает равномерное распределение звука по двум колонкам и
+            обеспечивает чистый, объемный звук в частотном диапазоне от 20 до
+            20000 Гц...
+            <a href="#about-product" class="product-detail__continuelink"
+              >подробнее</a
+            >
+          </p>
+          <a href="order.html">
+            <button
+              class="button button--primary product-detail__button"
+              type="button"
+              data-product="Товар 1"
+            >
+              Оставить заявку
+            </button>
+          </a>
+        </div>
+      </section>
+      <section class="section" id="about-product">
+        <h2>Описание</h2>
+        <p class="about-product__description">
+          Накладные наушники в черном цвете имеют формат стереосистемы 2.0. Он
+          предполагает равномерное распределение звука по двум колонкам и
+          обеспечивает чистый, объемный звук в частотном диапазоне от 20 до
+          20000 Гц. Это значит, что в этих наушниках будет комфортно
+          прослушивать музыку как с высокими нотами, так и с басами. Наушники
+          можно подключить к смартфону по Bluetooth на расстоянии до 10 м. На
+          одном заряде устройство будет проигрывать аудио до 100 ч. Восстановить
+          заряд можно с помощью функции быстрой зарядки через кабель USB Type-C
+          из комплекта. Для проводного подключения телефона предусмотрен кабель
+          кабель jack 2.5 mm - jack 3.5 mm. На смартфон можно скачать приложение
+          Bluetooth для управления. Переключать треки, ставить их на паузу, а
+          также принимать звонки вы сможете также через голосового помощника или
+          механическими кнопками.
+        </p>
+      </section>
+      <section class="section" id="specifications">
+        <h2>Характеристики</h2>
+        <div class="table-wrapper">
+          <table class="specs-table">
+            <caption class="visually-hidden">
+              Технические характеристики товара
+            </caption>
+            <tbody>
+              <tr class="specs-table__row">
+                <th class="specs-table__head" scope="row">Артикул</th>
+                <td class="specs-table__cell">5466522</td>
+              </tr>
+              <tr class="specs-table__row">
+                <th class="specs-table__head" scope="row">Тип конструкции</th>
+                <td class="specs-table__cell">накладные</td>
+              </tr>
+              <tr class="specs-table__row">
+                <th class="specs-table__head" scope="row">Тип соединения</th>
+                <td class="specs-table__cell">
+                  проводной, Bluetooth 5.3, кабель 1.2 м
+                </td>
+              </tr>
+              <tr class="specs-table__row">
+                <th class="specs-table__head" scope="row">Цвет</th>
+                <td class="specs-table__cell">чёрный</td>
+              </tr>
+              <tr class="specs-table__row">
+                <th class="specs-table__head" scope="row">Гарантия</th>
+                <td class="specs-table__cell">12 месяцев</td>
+              </tr>
+              <tr class="specs-table__row">
+                <th class="specs-table__head" scope="row">Наличие</th>
+                <td class="specs-table__cell">на складе</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section" id="related">
+        <h2>Похожие товары</h2>
+        <div class="products-grid--popular">
+          <article class="product-card">
+            <a href="product.html"
+              ><img class="product-card__image" src="images/product-2.jpg"
+            /></a>
+            <h3 class="product-card__title">
+              <a class="product-card__link" href="product.html"
+                >Механическая клавиатура</a
+              >
+            </h3>
+            <p class="product-card__description">
+              Компактный формат, подсветка, программируемые клавиши.
+            </p>
+            <p class="product-card__price">Цена: 6 000 ₽</p>
+            <button
+              class="button product-card__button"
+              type="button"
+              data-product="Товар 2"
+            >
+              Подробнее
+            </button>
+          </article>
+          <article class="product-card">
+            <a href="product.html"
+              ><img class="product-card__image" src="images/product-3.jpg"
+            /></a>
+            <h3 class="product-card__title">
+              <a class="product-card__link" href="product.html">Ноутбук</a>
+            </h3>
+            <p class="product-card__description">
+              Яркий экран, длительная автономность, быстрый SSD.
+            </p>
+            <p class="product-card__price">Цена: 60 000 ₽</p>
+            <button
+              class="button product-card__button"
+              type="button"
+              data-product="Товар 3"
+            >
+              Подробнее
+            </button>
+          </article>
+          <article class="product-card">
+            <a href="product.html"
+              ><img class="product-card__image" src="images/product-4.webp"
+            /></a>
+            <h3 class="product-card__title">
+              <a class="product-card__link" href="product.html"
+                >43' Телевизор</a
+              >
+            </h3>
+            <p class="product-card__description">
+              43-дюймовый телевизор с разрешением 4K Ultra HD.
+            </p>
+            <p class="product-card__price">Цена: 24 990 ₽</p>
+            <button
+              class="button product-card__button"
+              type="button"
+              data-product="Товар 3"
+            >
+              Подробнее
+            </button>
+          </article>
+          <article class="product-card">
+            <a href="product.html"
+              ><img class="product-card__image" src="images/product-5.webp"
+            /></a>
+            <h3 class="product-card__title">
+              <a class="product-card__link" href="product.html"
+                >Робот-пылесос</a
+              >
+            </h3>
+            <p class="product-card__description">
+              Робот-пылесос предназначен для ежедневной уборки и поддержания
+              чистоты разных поверхностей.
+            </p>
+            <p class="product-card__price">Цена: 20 990 ₽</p>
+            <button
+              class="button product-card__button"
+              type="button"
+              data-product="Товар 3"
+            >
+              Подробнее
+            </button>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contacts">
+      <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+      <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+    </footer>
+
+    <dialog
+      class="order-dialog"
+      id="order-dialog"
+      aria-labelledby="order-dialog-title"
+    >
+      <h2 class="order-dialog__title" id="order-dialog-title">
+        Оформление заявки
+      </h2>
+    </dialog>
+  </body>
+</html>

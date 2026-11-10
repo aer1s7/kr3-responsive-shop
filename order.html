@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Оформление заявки в интернет-магазине Electron: выбор товара, контакты, способ получения."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Оформление заявки — Electron" />
+    <meta
+      property="og:description"
+      content="Учебный frontend-проект интернет-магазина электроники."
+    />
+    <meta
+      property="og:image"
+      content="https://aer1s7.github.io/kr1-html-css-shop/images/preview.jpg"
+    />
+    <title>Оформление заявки — Electron</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <a id="top"></a>
+
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-header__logo" href="index.html">Electron</a>
+        <nav class="site-nav" aria-label="Основная навигация">
+          <ul class="site-nav__list">
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="catalog.html">Каталог</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="contacts.html">Контакты</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="index.html#popular">
+                Популярные товары
+              </a>
+            </li>
+            <li class="site-nav__item">
+              <a
+                class="site-nav__link site-nav__link--active"
+                href="order.html"
+              >
+                Оформить заявку
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a class="breadcrumbs__link" href="index.html">Главная</a>
+        <span class="breadcrumbs__current">Оформление заявки</span>
+      </nav>
+      <section class="section order-intro">
+        <p class="order-intro__eyebrow">Заявка</p>
+        <h1 class="order-intro__title">Оформление заявки</h1>
+        <p class="order-intro__text">
+          Заполните форму — мы свяжемся с вами, уточним детали и поможем
+          оформить заказ. Поля, отмеченные
+          <span class="order-form__required" aria-hidden="true">*</span>,
+          обязательны для заполнения.
+        </p>
+
+        <ol class="order-steps">
+          <li class="order-steps__item">
+            <span class="order-steps__num">1</span>
+            <span class="order-steps__text">Заполните форму</span>
+          </li>
+          <li class="order-steps__item">
+            <span class="order-steps__num">2</span>
+            <span class="order-steps__text">Мы свяжемся с вами</span>
+          </li>
+          <li class="order-steps__item">
+            <span class="order-steps__num">3</span>
+            <span class="order-steps__text">Подтвердим заказ и доставку</span>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section order-layout">
+        <form
+          class="order-form order-form--page order-card"
+          id="order-page-form"
+          action="order.html"
+          method="get"
+        >
+          <h2 class="order-card__title">Данные для заявки</h2>
+
+          <fieldset class="order-form__group order-form__group--wide">
+            <legend class="order-form__legend">Что заказываем</legend>
+
+            <div class="order-form__field">
+              <label class="order-form__label" for="page-product">
+                Товар / тема заявки
+              </label>
+              <input
+                class="order-form__input"
+                id="page-product"
+                name="product"
+                type="text"
+                placeholder="Например: Наушники накладные чёрные"
+              />
+            </div>
+
+            <div class="order-form__field">
+              <label class="order-form__label" for="page-topic">
+                Тема обращения
+                <span class="order-form__required" aria-hidden="true">*</span>
+              </label>
+              <select
+                class="order-form__select"
+                id="page-topic"
+                name="topic"
+                required
+              >
+                <option value="">Выберите тему</option>
+                <option value="product">Заказ товара</option>
+                <option value="consultation">Консультация</option>
+                <option value="delivery">Доставка</option>
+              </select>
+            </div>
+
+            <div class="order-form__field">
+              <label class="order-form__label" for="page-delivery">
+                Способ получения
+              </label>
+              <select
+                class="order-form__select"
+                id="page-delivery"
+                name="delivery"
+              >
+                <option value="pickup">Самовывоз</option>
+                <option value="courier">Курьером</option>
+                <option value="post">Почтой</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <fieldset class="order-form__group">
+            <legend class="order-form__legend">Контактные данные</legend>
+
+            <div class="order-form__field">
+              <label class="order-form__label" for="page-name">
+                Имя
+                <span class="order-form__required" aria-hidden="true">*</span>
+              </label>
+              <input
+                class="order-form__input"
+                id="page-name"
+                name="name"
+                type="text"
+                placeholder="Введите ваше имя"
+                autocomplete="given-name"
+                required
+              />
+            </div>
+
+            <div class="order-form__field">
+              <label class="order-form__label" for="page-email">
+                E-mail
+                <span class="order-form__required" aria-hidden="true">*</span>
+              </label>
+              <input
+                class="order-form__input"
+                id="page-email"
+                name="email"
+                type="email"
+                placeholder="example@mail.ru"
+                autocomplete="email"
+                required
+              />
+            </div>
+
+            <div class="order-form__field">
+              <label class="order-form__label" for="page-phone">
+                Телефон
+                <span class="order-form__required" aria-hidden="true">*</span>
+              </label>
+              <input
+                class="order-form__input"
+                id="page-phone"
+                name="phone"
+                type="tel"
+                inputmode="tel"
+                placeholder="+7 (900) 000-00-00"
+                pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"
+                title="Введите телефон в формате +7 (900) 000-00-00"
+                required
+              />
+            </div>
+          </fieldset>
+
+          <fieldset class="order-form__group">
+            <legend class="order-form__legend">Дополнительно</legend>
+
+            <div class="order-form__field">
+              <label class="order-form__label" for="page-comment">
+                Комментарий
+                <span class="order-form__required" aria-hidden="true">*</span>
+              </label>
+              <textarea
+                class="order-form__textarea"
+                id="page-comment"
+                name="comment"
+                rows="4"
+                placeholder="Укажите количество, цвет или другую информацию"
+                required
+              ></textarea>
+            </div>
+
+            <div class="order-form__field">
+              <label class="order-form__label" for="page-agreement">
+                <input
+                  id="page-agreement"
+                  name="agreement"
+                  type="checkbox"
+                  value="yes"
+                  required
+                />
+                Я согласен на обработку персональных данных
+                <span class="order-form__required" aria-hidden="true">*</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="order-form__actions">
+            <button class="button button--secondary" type="reset">
+              Очистить
+            </button>
+            <button class="button button--primary" type="submit">
+              Отправить заявку
+            </button>
+          </div>
+        </form>
+        <aside class="order-aside" aria-label="Дополнительная информация">
+          <div class="order-aside__card">
+            <h2 class="order-aside__title">Что будет после отправки</h2>
+            <ul class="order-aside__list">
+              <li>Мы позвоним или напишем в течение рабочего дня</li>
+              <li>Уточним наличие, цвет и способ доставки</li>
+              <li>Подтвердим заказ и сроки</li>
+            </ul>
+          </div>
+
+          <div class="order-aside__card">
+            <h2 class="order-aside__title">Контакты</h2>
+            <p class="order-aside__row">
+              <span class="order-aside__label">Телефон:</span>
+              <a class="order-aside__link" href="tel:+79257260295">
+                +7 925 726-02-95
+              </a>
+            </p>
+            <p class="order-aside__row">
+              <span class="order-aside__label">E-mail:</span>
+              <a class="order-aside__link" href="mailto:support@email.com">
+                support@email.com
+              </a>
+            </p>
+            <p class="order-aside__row">
+              <span class="order-aside__label">Режим работы:</span>
+              Пн–Вс, 10:00–20:00
+            </p>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer id="site-footer">
+      <div class="site-footer__inner">
+        <div>
+          <h2 class="site-footer__logo">Electron</h2>
+          <p>Учебный интернет-магазин электроники</p>
+        </div>
+        <div class="site-footer__sections">
+          <h2>Разделы</h2>
+          <a class="site-footer__link" href="index.html">Главная</a>
+          <a class="site-footer__link" href="catalog.html">Каталог</a>
+          <a class="site-footer__link" href="order.html">Оформление заявки</a>
+          <a class="site-footer__link" href="contacts.html">Контакты</a>
+        </div>
+        <div>
+          <h2>Связаться с нами</h2>
+          <p>+7 925 726-02-95</p>
+          <p>support@email.com</p>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p>&copy; 2026 — Учебный проект</p>
+      </div>
+    </footer>
+
+    <a href="#top" class="scroll-top" aria-label="Наверх" title="Наверх">
+      <img class="scroll-top__img" src="images/top.png" alt="" />
+    </a>
+  </body>
+</html>

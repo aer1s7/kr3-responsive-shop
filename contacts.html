@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Контакты учебного интернет-магазина Electron: телефон, e-mail, адрес, форма обратной связи."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Контакты — Electron" />
+    <meta
+      property="og:description"
+      content="Учебный frontend-проект интернет-магазина электроники."
+    />
+    <meta
+      property="og:image"
+      content="https://aer1s7.github.io/kr1-html-css-shop/images/preview.jpg"
+    />
+    <title>Контакты — Electron</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <a id="top"></a>
+
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-header__logo" href="index.html">Electron</a>
+        <nav class="site-nav" aria-label="Основная навигация">
+          <ul class="site-nav__list">
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="catalog.html">Каталог</a>
+            </li>
+            <li class="site-nav__item">
+              <a
+                class="site-nav__link site-nav__link--active"
+                href="contacts.html"
+              >
+                Контакты
+              </a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="index.html#popular">
+                Популярные товары
+              </a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="order.html">Оформить заявку</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a class="breadcrumbs__link" href="index.html">Главная</a>
+        <span class="breadcrumbs__current">Контакты</span>
+      </nav>
+      <section class="section contacts-intro">
+        <h1>Контакты</h1>
+        <p class="contacts-intro__text">
+          Есть вопрос по товару, доставке или оплате? Свяжитесь с нами удобным
+          способом — ответим в течение рабочего дня.
+        </p>
+      </section>
+
+      <section class="section contacts-grid" aria-label="Способы связи">
+        <article class="contact-card">
+          <span class="contact-card__icon" aria-hidden="true">📞</span>
+          <h2 class="contact-card__title">Телефон</h2>
+          <p class="contact-card__text">
+            <a class="contact-card__link" href="tel:+79257260295">
+              +7 925 726-02-95
+            </a>
+          </p>
+          <p class="contact-card__note">Пн–Вс, 10:00–20:00</p>
+        </article>
+
+        <article class="contact-card">
+          <span class="contact-card__icon" aria-hidden="true">✉️</span>
+          <h2 class="contact-card__title">E-mail</h2>
+          <p class="contact-card__text">
+            <a class="contact-card__link" href="mailto:support@email.com">
+              support@email.com
+            </a>
+          </p>
+          <p class="contact-card__note">Ответим в течение 1 рабочего дня</p>
+        </article>
+
+        <article class="contact-card">
+          <span class="contact-card__icon" aria-hidden="true">📍</span>
+          <h2 class="contact-card__title">Адрес</h2>
+          <p class="contact-card__text">г. Москва, учебный проект</p>
+          <p class="contact-card__note">Самовывоз по договорённости</p>
+        </article>
+
+        <article class="contact-card">
+          <span class="contact-card__icon" aria-hidden="true">💬</span>
+          <h2 class="contact-card__title">Мессенджеры</h2>
+          <p class="contact-card__text">
+            Telegram, WhatsApp — по номеру телефона
+          </p>
+          <p class="contact-card__note">Отвечаем быстрее всего</p>
+        </article>
+      </section>
+      <section
+        class="section contacts-map"
+        aria-labelledby="contacts-map-title"
+      >
+        <div class="contacts-map__info">
+          <h2 id="contacts-map-title">Как нас найти</h2>
+          <p>
+            Мы работаем как учебный проект: офиса для посетителей нет, но
+            самовывоз можно согласовать заранее по телефону или e-mail.
+          </p>
+
+          <dl class="contacts-map__facts">
+            <div class="contacts-map__fact">
+              <dt>Режим работы</dt>
+              <dd>Пн–Вс, 10:00–20:00</dd>
+            </div>
+            <div class="contacts-map__fact">
+              <dt>Самовывоз</dt>
+              <dd>по предварительной договорённости</dd>
+            </div>
+            <div class="contacts-map__fact">
+              <dt>Доставка</dt>
+              <dd>по Москве и России</dd>
+            </div>
+          </dl>
+
+          <a href="order.html">
+            <button class="button button--primary">Оставить заявку</button>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer id="site-footer">
+      <div class="site-footer__inner">
+        <div>
+          <h2 class="site-footer__logo">Electron</h2>
+          <p>Учебный интернет-магазин электроники</p>
+        </div>
+        <div class="site-footer__sections">
+          <h2>Разделы</h2>
+          <a class="site-footer__link" href="index.html">Главная</a>
+          <a class="site-footer__link" href="catalog.html">Каталог</a>
+          <a class="site-footer__link" href="order.html">Оформление заявки</a>
+          <a class="site-footer__link" href="contacts.html">Контакты</a>
+        </div>
+        <div>
+          <h2>Связаться с нами</h2>
+          <p>+7 925 726-02-95</p>
+          <p>support@email.com</p>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p>&copy; 2026 — Учебный проект</p>
+      </div>
+    </footer>
+
+    <a href="#top" class="scroll-top" aria-label="Наверх" title="Наверх">
+      <img class="scroll-top__img" src="images/top.png" alt="" />
+    </a>
+  </body>
+</html>
